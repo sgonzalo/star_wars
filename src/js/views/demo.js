@@ -10,15 +10,11 @@ export const Demo = () => {
 
 	return (
 		<div className="container">
-			<ul className="list-group">
-				{store.planets.map((item, index) => {
-					return (
-						<li key={index} className="list-group-item d-flex justify-content-between">
-							{item.name}
-						</li>
-					);
-				})}
-			</ul>
+			{/* {store.planets.map((item, index) => (
+				<ul key={index} className="list-group">
+					<li className="list-group-item d-flex justify-content-between">{item.name}</li>
+				</ul>
+			))} */}
 		</div>
 	);
 };

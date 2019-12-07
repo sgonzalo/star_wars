@@ -27,14 +27,16 @@ const injectContext = PassedComponent => {
 			 * This function is the equivalent to "window.onLoad", it only run once on the entire application lifetime
 			 * you should do your ajax requests or fetch api requests here
 			 *
-			 * state.actions.loadSomeData(); <---- calling this function from the flux.js actions
 			 *
 			 **/
-			fetch("https://swapi.co/api/planets/")
-				.then(response => response.json())
-				.then(data => {
-					setState({ ...state, store: { ...state.store, planets: data.results } });
-				});
+			// fetch("https://swapi.co/api/planets")
+			// 	.then(response => response.json())
+			// 	.then(data => {
+			// 		setState({ ...state, store: { ...state.store, planets: data.results } });
+			// 	});
+			state.actions.loadPlanets();
+			state.actions.loadVehicles();
+			state.actions.loadPeople();
 		}, []);
 
 		// the initial value for the context its not null anymore, but the current state of this component,
