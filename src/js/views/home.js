@@ -12,7 +12,9 @@ const Home = () => {
 	// else {
 	return (
 		<div>
-			<h1>Test</h1>
+			<People />
+			<Vehicles />
+			<Planets />
 		</div>
 	);
 };
