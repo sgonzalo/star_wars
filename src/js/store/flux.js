@@ -21,7 +21,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 			},
 			loadVehicles: () => {
-				const url = "";
 				fetch("https://swapi.co/api/vehicles")
 					.then(response => response.json())
 					.then(data => {
